@@ -30,6 +30,11 @@ pre {
     padding: 0px;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -172,6 +177,7 @@ pre {
 
 .nav-link:hover, .nav-link:focus {
     color: var(--blue-text);
+    transition: transform var(--transition-function);
     
 }
 
@@ -304,6 +310,7 @@ pre {
     background-color: var(--accent-text);
     border-radius: 50%;
     color: var(--white-text);
+    transition: transform var(--transition-function);
   }
   
 .footer-second-svg {
@@ -381,4 +388,5 @@ pre {
 .hero-close:focus {
     outline: none;
     background-color: var(--accent-text);
+    transition: transform var(--transition-function);
 }
