@@ -39,6 +39,7 @@ main {
     0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08),
     0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-function);
 
 }
 
@@ -139,17 +140,29 @@ main {
     z-index: 1;
 }
 
+.text-overlay {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    
+}
+
 .poster-list:hover .poster-text,
 .poster-list:focus .poster-text {
     opacity: 1;
     transform: translateY(0);
     z-index: 2;
+    transition: transform var(--transition-function);
     
     
 }
 
 .poster-list:hover,
 .poster-list:focus {
+    transition: transform var(--transition-function);
     box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
