@@ -211,7 +211,6 @@ main {
     height: auto;
 }
 .worker-card {
-    width: 270px;
     flex-basis: calc(100% / 4 - var(--list-gap));
     margin-left: var(--list-gap);
     margin-top: var(--list-gap);
@@ -294,6 +293,7 @@ main {
     background-color: var(--accent-text);
     border-radius: 50%;
     color: var(--white-text);
+    transition: transform var(--transition-function);
 }
     
 .team-link-svg {
@@ -354,5 +354,6 @@ main {
   .clients-link:focus {
     color:var(--accent-text);
     border: 1px solid var(--accent-text);
+    transition: transform var(--transition-function);
   }
 
