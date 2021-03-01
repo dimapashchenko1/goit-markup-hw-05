@@ -50,8 +50,80 @@ main {
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 200px;
+    
 }
 
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: var(--transition-function);
+    
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+
+    background: rgba(0, 0, 0, 0.2);
+    visibility: visible;
+    opacity: 1;
+    transition: var(--transition-function);
+} 
+
+
+.hero-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 528px;
+    min-height: 581px;
+    padding: 40px;
+      
+    border-radius: 4px;
+    background-color: var(--white-text);
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--transition-function);
+}
+  
+.is-hidden .hero-modal {
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: var(--transition-function);
+}
+
+.hero-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+    width: 30px;
+    height: 30px;
+    
+    background: var(--white-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: var(--transition-function);
+}
+      
+.hero-close:hover,
+.hero-close:focus {
+    outline: none;
+    background-color: var(--accent-text);
+    transition: var(--transition-function);
+}
   
   /* ===FEATURES=== */
 .features {
@@ -286,6 +358,7 @@ main {
     width: 44px;
     height: 44px;
     color: var(--clients-svg-color);
+    transition: var(--transition-function);
 }
     
 .team-link-item:hover,
@@ -293,7 +366,7 @@ main {
     background-color: var(--accent-text);
     border-radius: 50%;
     color: var(--white-text);
-    transition: transform var(--transition-function);
+    transition: var(--transition-function);
 }
     
 .team-link-svg {
@@ -343,6 +416,7 @@ main {
   
     border-radius: 4px;
     border: 1px solid var(--clients-svg-color);
+    transition: var(--transition-function);
   }
   
   .clients-logo {
@@ -354,6 +428,6 @@ main {
   .clients-link:focus {
     color:var(--accent-text);
     border: 1px solid var(--accent-text);
-    transition: transform var(--transition-function);
+    transition: var(--transition-function);
   }
 
